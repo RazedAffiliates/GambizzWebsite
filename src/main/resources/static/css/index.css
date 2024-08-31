@@ -1,0 +1,580 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700; /* Bold headings */
+    letter-spacing: 1px;
+}
+
+p, a {
+    font-weight: 400; /* Regular text */
+    letter-spacing: 1px;
+}
+
+/* Navbar Container */
+.navbar {
+    background-color: rgba(28, 28, 28, 0.9); /* Background color */
+    border-bottom: 3px solid #e3b341; /* Yellow accent border */
+    padding: 10px 20px; /* Padding around content */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 100%;
+    height: 100px;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+/* Navbar Brand */
+.navbar-brand {
+    color: #e3b341; /* Yellow color for brand */
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.navbar-brand:hover {
+    color: #fff; /* White color on hover */
+}
+
+/* Navbar Items */
+.navbar-nav {
+    flex: 1;
+    justify-content: center; /* Center nav items */
+}
+
+.navbar-nav .nav-link {
+    color: #e0e0e0; /* Light gray for nav items */
+    margin: 0 15px; /* Space between items */
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #fff; /* White color on hover */
+    border-bottom: 2px solid #e3b341; /* Yellow underline on hover */
+}
+
+/* Login Button */
+.navbar-nav .nav-item.login-button {
+    margin-left: auto; /* Align login button to the right */
+}
+
+.navbar-nav .nav-item.login-button .nav-link {
+    background-color: #e3b341; /* Yellow background */
+    color: #1c1c1c; /* Dark text color */
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 1px solid #e3b341;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-nav .nav-item.login-button .nav-link:hover {
+    background-color: #d1a63b; /* Slightly darker yellow */
+    color: #fff; /* White text on hover */
+}
+
+/* Responsive Adjustments */
+.navbar-toggler {
+    border: none; /* Remove default border */
+    color: #e3b341; /* Yellow color for toggle icon */
+}
+
+/* Container for sponsor boxes */
+.container {
+    padding: 40px 20px;
+}
+
+.yellow-glowing {
+    color: #e3b341; /* Yellow color for the heading */
+    text-transform: uppercase;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7), /* Soft white shadow for subtle glow */
+    0 1px 4px rgba(255, 255, 255, 0.5); /* Slightly stronger white shadow for depth */
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.full-screen-section {
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Flexbox for alignment */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    overflow: hidden; /* Hide overflow to maintain full-screen effect */
+    position: relative; /* For overlay positioning */
+}
+
+/* Welcome Section Styling */
+.welcome-section {
+    background: url('../images/background.png') repeat;
+    background-size: cover;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+
+/* Overlay Effect */
+.welcome-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1; /* Position behind content */
+}
+
+/* Welcome Content */
+.welcome-content {
+    position: relative; /* Position above the overlay */
+    z-index: 2; /* Ensure content is above overlay */
+}
+
+.welcome-content p {
+    text-transform: uppercase;
+}
+
+.welcome-title {
+    font-size: 4rem; /* Large title font size */
+    margin-bottom: 20px; /* Space below the title */
+    color: #e3b341; /* Yellow color for the title */
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.7), /* Soft white shadow for glow */
+    0 1px 6px rgba(255, 255, 255, 0.5); /* Slightly stronger shadow for depth */
+    animation: fadeInUp 1s ease-out; /* Animation for fade-in effect */
+}
+
+.welcome-message {
+    font-size: 1.5rem; /* Medium font size for the message */
+    margin-bottom: 30px; /* Space below the message */
+    max-width: 800px; /* Limit the width of the message */
+    animation: fadeInUp 1s ease-out 0.5s; /* Animation for fade-in effect with delay */
+}
+
+/* Button Styling */
+.welcome-button {
+    background-color: #e3b341; /* Yellow background */
+    border-color: #e3b341; /* Match border color */
+    color: #1c1c1c; /* Dark text color */
+    font-weight: bold; /* Bold text */
+    padding: 12px 24px; /* Padding inside the button */
+    text-transform: uppercase; /* Uppercase text */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1.1rem; /* Slightly larger font size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    margin-right: 20px;
+}
+
+.welcome-button:hover {
+    background-color: #d1a63b; /* Darker yellow on hover */
+    color: #fff; /* White text color on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Sponsorships Section */
+#sponsorships {
+    background: linear-gradient(135deg, #1c1c1c 0%, #2d2d2d 100%);
+}
+
+#sponsorships .container {
+    max-width: 1200px; /* Limit the container width for better alignment */
+}
+
+#sponsorships .row {
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    gap: 20px; /* Add space between the items */
+}
+
+#sponsorships .col-md-4 {
+    flex: 0 1 300px; /* Adjust the width as needed */
+    max-width: 300px; /* Limit the width */
+}
+
+#sponsorships h2 {
+    color: #e3b341; /* Yellow color for the heading */
+    font-size: 2.5rem; /* Larger font size for prominence */
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7), /* Soft white shadow for subtle glow */
+    0 1px 4px rgba(255, 255, 255, 0.5); /* Slightly stronger white shadow for depth */
+}
+
+.sponsor-box {
+    background-color: #1f1f1f; /* Dark background for the box */
+    border: 1px solid #333; /* Dark border for definition */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Ensure image and content are contained */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.sponsor-box:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
+}
+
+.sponsor-img {
+    width: 100%;
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Ensure images cover the area */
+}
+
+.sponsor-info {
+    padding: 20px; /* Padding inside the box */
+    text-align: center;
+}
+
+.sponsor-title {
+    color: #e3b341; /* Yellow color for titles */
+    font-size: 1.5rem; /* Slightly larger font size */
+    font-weight: bold;
+}
+
+.sponsor-description {
+    color: #e0e0e0; /* Light gray color for text */
+    margin: 10px 0;
+}
+
+.btn-primary {
+    background-color: #e3b341; /* Vibrant green for buttons */
+    color: #1c1c1c;
+    border: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: #d1a63b;
+    border: none;
+    color: #fff;
+}
+
+/* Leaderboard Section */
+#leaderboard {
+    background: linear-gradient(135deg, #2b2b2b 0%, #3a3a3a 100%);
+    padding: 50px 0; /* Ensure space around the content */
+}
+
+#leaderboard.my-5 {
+    margin: 0 !important;
+}
+#leaderboard h1 {
+    color: #e3b341;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7), /* Soft white shadow for subtle glow */
+    0 1px 4px rgba(255, 255, 255, 0.5); /* Slightly stronger white shadow for depth */
+}
+.podium {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Adjust the gap between the boxes */
+    position: relative;
+    margin-top: 50px; /* Adjust as needed */
+}
+
+.podium-box {
+    border: 2px solid #333;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    padding: 20px;
+    width: 150px; /* Adjust the width as needed */
+}
+
+.first-place {
+    height: 400px; /* Adjust the height as needed */
+    width: 300px;
+    background:
+            linear-gradient(
+                    45deg,
+                    #ffde45,
+                    #ffffff 16%,
+                    #ffde45 21%,
+                    #ffffff 24%,
+                    #452100 27%,
+                    #ffde45 36%,
+                    #ffffff 45%,
+                    #ffffff 60%,
+                    #ffde45 72%,
+                    #ffffff 80%,
+                    #ffde45 84%,
+                    #452100
+            );
+}
+
+.second-place {
+    height: 300px; /* Adjust the height as needed */
+    width: 300px;
+    background:
+            linear-gradient(
+                    45deg,
+                    #dedede,
+                    #ffffff 16%,
+                    #dedede 21%,
+                    #ffffff 24%,
+                    #454545 27%,
+                    #dedede 36%,
+                    #ffffff 45%,
+                    #ffffff 60%,
+                    #dedede 72%,
+                    #ffffff 80%,
+                    #dedede 84%,
+                    #a1a1a1
+            );
+}
+
+.third-place {
+    height: 300px; /* Adjust the height as needed */
+    width: 300px;
+    background:
+            linear-gradient(
+                    45deg,
+                    #ca7345,
+                    #ffdeca 16%,
+                    #ca7345 21%,
+                    #ffdeca 24%,
+                    #a14521 27%,
+                    #ca7345 36%,
+                    #ffdeca 45%,
+                    #ffdeca 60%,
+                    #ca7345 72%,
+                    #ffdeca 80%,
+                    #ca7345 84%,
+                    #732100
+            );
+}
+
+.number-circle-podium {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(44, 44, 44);
+    border: 2px solid ;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 46px;
+    font-size: 18px;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+}
+
+.podium-item {
+    text-align: center;
+    margin-bottom: 20px; /* Adjust spacing between podium items */
+    position: relative;
+}
+
+.name {
+    font-size: 24px; /* Adjust as needed */
+    margin: 25px auto;
+    color: #333;
+    font-weight: bold;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7), /* Soft white shadow for subtle glow */
+    0 1px 4px rgba(255, 255, 255, 0.5); /* Slightly stronger white shadow for depth */
+}
+
+.wagered {
+    font-size: 18px; /* Adjust as needed */
+    margin: 10px auto; /* Adjust spacing */
+    color: #333;
+    font-weight: bold;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7), /* Soft white shadow for subtle glow */
+    0 1px 4px rgba(255, 255, 255, 0.5); /* Slightly stronger white shadow for depth */
+}
+
+.wagered-amount {
+    font-size: 20px; /* Adjust as needed */
+    margin-bottom: 10px; /* Adjust spacing */
+    color: #333;
+    font-weight: bold;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7), /* Soft white shadow for subtle glow */
+    0 1px 4px rgba(255, 255, 255, 0.5); /* Slightly stronger white shadow for depth */
+}
+
+.podium-item hr {
+    color: black;
+}
+
+.price-box {
+    position: absolute;
+    bottom: 0px; /* Adjust as needed */
+    width: 100%; /* Adjust to fit within padding */
+    background-color: rgba(59, 56, 56, 0.8); /* Light gray transparent box */
+    padding: 5px 0; /* Adjust padding as needed */
+    text-align: center;
+    right: 0px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.price {
+    font-size: 35px; /* Adjust as needed */
+    color: #fff;
+    text-shadow:
+            0 0 7px #fff,
+            0 0 42px #0fa,
+            0 0 82px #0fa,
+            0 0 92px #0fa;
+    margin: auto;
+}
+
+/* Latest Content Section */
+#latest-content {
+    background-color: #1f1f1f; /* Dark background similar to other sections */
+    padding: 60px 0; /* Adjust padding as needed */
+}
+
+#latest-content h1 {
+    color: #e3b341;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7), /* Soft white shadow for subtle glow */
+    0 1px 4px rgba(255, 255, 255, 0.5); /* Slightly stronger white shadow for depth */
+}
+
+.video-box {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.video-thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-thumbnail:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
+}
+
+.video-title {
+    color: #e0e0e0; /* Light gray text */
+    font-size: 1.1rem;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Shop Introduction Section */
+#shop-intro {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+    padding-top: 50px; /* Ensure there's space for the navbar */
+}
+
+#shop-intro h1 {
+    color: #e3b341;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7), /* Soft white shadow for subtle glow */
+    0 1px 4px rgba(255, 255, 255, 0.5); /* Slightly stronger white shadow for depth */
+}
+
+.shop-info-box {
+    background-color: #2b2b2b;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shop-info-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.shop-info-box h4 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #e3b341;
+}
+
+.shop-info-box p {
+    font-size: 1rem;
+    color: #e0e0e0;
+}
+
+.btn-primary {
+    background-color: #e3b341;
+    border-color: #e3b341;
+    color: #1c1c1c;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #d1a63b;
+    border-color: #d1a63b;
+    color: #fff;
+}
+
+/* Footer */
+
+.footer {
+    background-color: rgba(28, 28, 28, 0.9);
+    color: #fff;
+}
+
+.footer h5 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #00acee; /* Change color on hover */
+}
+
+.footer i {
+    margin: 0 15px;
+    transition: transform 0.3s ease;
+}
+
+.footer i:hover {
+    transform: scale(1.2); /* Scale up the icon on hover */
+}
+
