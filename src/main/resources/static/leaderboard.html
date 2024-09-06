@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="pictures/logo.png" type="images/logo.png">
+    <title>TheGambizz - Leaderboards</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/leaderboards.css?v.1.1.2">
+    <script src="js/leaderboards.js?v=0.0.4" type="module" defer></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/home">Gambizz</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbarNav" class="collapse navbar-collapse">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/bonuses">Bonuses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/leaderboards">Leaderboards</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/socials">Socials</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section id="leaderboard-section" class="fullscreen-section leaderboard-section">
+    <img src="pictures/header-leaderboard.png" alt="Front Image" class="front-image">
+    <div class="content">
+        <h1>Leader<span>board</span></h1>
+        <!-- The Modal -->
+        <!-- Button to Open the Modal -->
+        <a class="info-button" data-toggle="modal" data-target="#myModal">Show Information</a>
+    </div>
+
+    <div class="podium">
+        <div class="podium-box second-place podium-item" id="2">
+            <img src="pictures/second.png" alt="Second">
+            <h2>User</h2>
+            <p class="name">N/A</p>
+            <h2>Wagered</h2>
+            <p class="wagered-amount"><span class="highlight">$</span> 0.00</p>
+            <div class="price-box-second">
+                <p><span class="highlight">$</span> 250.00</p>
+            </div>
+        </div>
+        <div class="podium-box confetti first-place podium-item" id="1">
+            <img src="pictures/first.png" alt="First">
+            <h2>User</h2>
+            <p class="name">N/A</p>
+            <h2>Wagered</h2>
+            <p class="wagered-amount"><span class="highlight">$</span> 0.00</p>
+            <div class="price-box-first">
+                <p><span class="highlight">$</span> 500.00</p>
+            </div>
+        </div>
+        <div class="podium-box third-place podium-item" id="3">
+            <img src="pictures/third.png" alt="Third">
+            <h2>User</h2>
+            <p class="name">N/A</p>
+            <h2>Wagered</h2>
+            <p class="wagered-amount"><span class="highlight">$</span> 0.00</p>
+            <div class="price-box-third">
+                <p><span class="highlight">$</span> 125.00</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="leaderboard">
+        <table class="table table-dark table-hover leaderboard-table text-center">
+            <thead>
+            <tr>
+                <th scope="col">Rank</th>
+                <th scope="col">Username</th>
+                <th scope="col">Wagered</th>
+                <th scope="col">Prize</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</section>
+
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <!-- Close Button Positioned Outside Modal -->
+            <button type="button" class="close outside-close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+
+            <div class="modal-body">
+                <h2 class="glow-text">Information</h2>
+                <div class="line"></div>
+                <p>the leaderboard is designed to give back to the community for all the support that they have given by wagering on our sponsored partners</p>
+                <div class="line"></div>
+                <ul>
+                    <li>Every bet on any game with an account registered with <span>my code</span> will count towards the leaderboard</li>
+                    <li>Throughout the month, stay competitive and climb <span>the leaderboard</span> to win prizes</li>
+                    <li>The <span>top 5</span> wagerers of the month will be rewarded with cash prizes up til <span>$500</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>

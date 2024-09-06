@@ -1,0 +1,400 @@
+body {
+    background-color: rgb(23, 23, 23);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure body takes full height */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    scroll-behavior: smooth;
+}
+
+.container-fluid {
+    margin: 0 150px;
+}
+
+/* Custom styles for the navbar */
+.navbar-custom {
+    background-color: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(10px);
+    height: 75px;
+    padding: 0 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s;
+}
+
+/* Brand styling */
+.navbar-brand {
+    color: #fff;
+    font-family: "Black Street", serif;
+    font-size: 4rem;
+}
+
+.navbar-brand:hover {
+    color: #fff;
+    font-family: "Black Street", serif;
+    font-size: 4rem;
+    text-decoration: none;
+}
+
+/* Ensure navbar collapse takes full width */
+.navbar-collapse {
+    flex-grow: 1;
+    padding-right: 200px; /* Adjust this to move the nav links to the right */
+}
+
+/* Nav items */
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Spacing between links */
+}
+
+/* Nav links styling */
+.navbar-nav .nav-link {
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 8px 10px;
+    transition: color 0.3s;
+}
+
+/* Hover effect for links */
+.navbar-nav .nav-link:hover {
+    color: #cccccc;
+}
+
+/* Navbar toggler for mobile view */
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Mobile adjustments */
+@media (max-width: 992px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-collapse {
+        padding-left: 0;
+    }
+}
+
+.fullscreen-section {
+    width: 100%;
+    margin: 0; /* Remove default margin */
+    padding-top: 110px;
+}
+
+#leaderboard-section {
+   background-color: rgb(23, 23, 23);
+}
+
+.leaderboard-section {
+    position: relative;
+    height: 130vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.front-image {
+    position: absolute;
+    top: 40%; /* Adjust this value to position the image vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+    width: 100%; /* Adjust the size of the image */
+    z-index: 2; /* Ensure it is above the background */
+}
+
+.content {
+    position: relative;
+    text-align: center;
+    z-index: 3;
+}
+
+.content h1 {
+    color: #00acee;
+    font-family: "Black Street", serif;
+    font-size: 6rem;
+}
+
+.content span {
+    color: #fff;
+    font-family: "Black Street", serif;
+    font-size: 6rem;
+}
+
+.info-button {
+    background-color: #3289F1;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.info-button:hover {
+    background-color: #114a8a;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal Background */
+.modal-content {
+    background-color: rgba(26, 26, 26, 0.9); /* Dark background with transparency */
+    border: 1px solid #404043;
+    border-radius: 10px; /* Rounded corners */
+    backdrop-filter: blur(10px); /* Optional: blur effect */
+    color: #ffffff; /* White text */
+}
+
+/* Modal Header (Title) */
+.modal-body h2 {
+    color: #00acee;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: "Black Street", serif;
+}
+
+.modal-body h2 span {
+    color: #fff;
+    font-family: "Black Street", serif;
+    font-size: 3rem;
+}
+
+.modal-body p {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #1986b6;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Separator Line */
+.line {
+    width: 100%; /* Adjust the width of the line */
+    height: 1px; /* Thickness of the line */
+    background-color: #404043; /* Color of the line */ /* Center the line and provide spacing */
+    margin-bottom: 20px;
+}
+
+/* Modal List Styling */
+.modal-body ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.modal-body ul li {
+    padding: 10px 0;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #cccccc; /* Light grey text */
+    text-align: center;
+}
+
+.modal-body ul li span {
+    padding: 10px 0;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #00acee; /* Light grey text */
+}
+
+/* List Bullet Point Styling */
+.modal-body ul li::before {
+    content: '•'; /* Custom bullet point */
+    color: #00acee; /* Purple bullet point */
+    padding-right: 10px;
+}
+
+/* Style for the Close Button Outside the Modal */
+.outside-close {
+    position: absolute;
+    top: 0; /* Position above the modal */
+    right: -30px; /* Position to the right, outside the modal */
+    background-color: #404043;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    color: #ffffff; /* Close button color */
+    cursor: pointer;
+}
+
+/* Optional: Change close button color on hover */
+.outside-close:hover {
+    color: #cccccc;
+}
+
+/* General Container for the Podium */
+.podium {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    margin-top: 30px; /* Adjust as needed */
+}
+
+/* Pentagon Shape */
+.podium-box {
+    background-color: #101014;
+    text-align: center;
+    display: inline-block;
+    justify-content: center;
+    position: relative;
+    padding: 0;
+    clip-path: polygon(
+            50% 0%,
+            90% 10%, /* Adjust to make the top less pointy */
+            80% 100%,
+            20% 100%,
+            10% 10%
+    );
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+    margin-bottom: 20px; /* Adjust spacing between podium items */
+}
+
+.podium-box img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 125px;
+}
+
+.first-place {
+    height: 400px; /* Adjust the height as needed */
+    width: 350px; /* Adjust the width as needed */
+}
+
+.second-place {
+    height: 325px; /* Adjust the height as needed */
+    width: 300px; /* Adjust the width as needed */
+}
+
+.third-place {
+    height: 325px; /* Adjust the height as needed */
+    width: 300px; /* Adjust the width as needed */
+}
+
+.podium-box h2 {
+    color: #6c6c73;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.podium-box p {
+    color: #fff;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.price-box-second {
+    background: #22b1ec;
+    border: 1px solid #4DC5F8;
+    padding-top: 5px;
+}
+
+.price-box-second span {
+    color: #9fe3ff;
+}
+
+.price-box-first {
+    background: #dea101;
+    border: 1px solid #FFB800;
+    padding-top: 5px;
+    margin-top: 91px;
+}
+
+.price-box-first span {
+    color: #ffd776;
+}
+
+.price-box-third {
+    background: #4b2e00;
+    border: 1px solid #5E3800;
+    padding-top: 5px;
+}
+
+.price-box-third span {
+    color: #a26306;
+}
+
+.leaderboard-table {
+    width: 900px; /* Adjust as needed */
+    border-collapse: separate;
+    border-spacing: 0 15px; /* Gap between rows */
+    background-color: transparent;
+    margin-top: 20px;
+}
+
+.leaderboard-table thead th {
+    padding: 10px;
+    font-size: 1.2rem; /* Adjust as needed */
+}
+
+.leaderboard-table tbody tr {
+    background-color: rgb(0, 0, 0); /* Black row */
+    border-radius: 10px;
+}
+
+.leaderboard-table tbody tr td {
+    padding: 15px;
+    font-size: 1rem; /* Adjust as needed */
+    border: none; /* Remove default table borders */
+}
+
+.leaderboard-table tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #b0d6c1;
+}
+
+/*================ FOOTER ================*/
+
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.footer h5 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #00acee; /* Change color on hover */
+}
+
+.footer i {
+    margin: 0 15px;
+    transition: transform 0.3s ease;
+}
+
+.footer i:hover {
+    transform: scale(1.2); /* Scale up the icon on hover */
+}

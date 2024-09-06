@@ -3,222 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/logo.png" type="images/logo.png">
+    <link rel="icon" href="pictures/logo.png" type="images/logo.png">
     <title>TheGambizz - Home</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/index.css">
-    <style>
-        .welcome-section {
-            background:
-                    linear-gradient(
-                            rgba(0, 0, 0, 0.6), /* Adjust opacity (0.6 for less transparency) */
-                            rgba(0, 0, 0, 0.6)
-                    ),
-                    url('images/background.png') repeat;
-            background-size: cover;
-            color: #fff;
-            position: relative;
-            text-align: center;
-            overflow: hidden;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            animation: moveBackground 30s linear infinite;
-        }
-
-        @keyframes moveBackground {
-            0% {
-                background-position: 0 0;
-            }
-            100% {
-                background-position: 100% 100%;
-            }
-        }
-
-        .welcome-content {
-            position: relative;
-            z-index: 1;
-        }
-    </style>
+    <link rel="stylesheet" href="css/home.css?v.1.0.2">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg">
-    <a class="navbar-brand" href="#">TheGambizz</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon">&#9776;</span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-auto"> <!-- Center nav items -->
-            <li class="nav-item">
-                <a class="nav-link active" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Bonuses</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Leaderboards</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Shop</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Games</a>
-            </li>
-        </ul>
-        <ul class="navbar-nav">
-            <li class="nav-item login-button">
-                <a class="nav-link" href="#">Login</a>
-            </li>
-        </ul>
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/home">Gambizz</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbarNav" class="collapse navbar-collapse">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/bonuses">Bonuses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/leaderboards">Leaderboards</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/socials">Socials</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>
 
 <!-- Welcome Section -->
-<section class="welcome-section">
-    <div class="welcome-content">
-        <h1 class="yellow-glowing bold">Welcome</h1>
-        <p>Enjoy thegambizz rewards & perks everyday</p>
-        <p>for playing under the code "<span class="yellow-glowing bold">TGZZ</span>"</p>
-        <a href="#bonuses" class="btn welcome-button">Claim Bonuses</a>
-        <a href="#leaderboard" class="btn welcome-button">Leaderboard</a>
+<section id="welcome-section" class="fullscreen-section welcome-section">
+    <img src="pictures/header.png" alt="Floating Image" class="floating-image">
+    <div class="content">
+        <h1 class="black-street">TheGambizz</h1>
+        <p>Unlock and indulge in the ultimate VIP experience by</p>
+        <p>competing and claiming exclusive bonus offers</p>
+        <div class="buttons">
+            <a href="#sponsorships" class="btn btn-primary-custom">Bonuses</a>
+            <a href="/leaderboards" class="btn btn-secondary-custom">Leaderboards</a>
+        </div>
+
+        <div class="redirection">
+            <p>CLAIM BONUSES</p>
+            <div class="circle">
+                <a href="#sponsorships">
+                    <img src="pictures/arrows.png" alt="Arrows">
+                </a>
+            </div>
+        </div>
     </div>
 </section>
 
-<!-- Sponsorships/Bonuses Section -->
-<section id="sponsorships" class="full-screen-section py-5">
+<section id="sponsorships" class="fullscreen-section">
     <div class="container">
-        <h2 class="text-center mb-4 text-yellow">Our Sponsors & Bonuses</h2>
+        <h1 class="text-center">Bonus <span>Offers</span></h1>
+        <div class="line-with-text">
+            <span>Claim and receive rewards instantly!</span>
+        </div>
         <div class="row">
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="sponsor-box">
-                    <img src="images/metaspins.jpg" class="sponsor-img" alt="Sponsor 1">
-                    <div class="sponsor-info">
-                        <h5 class="sponsor-title">Sponsor 1</h5>
-                        <p class="sponsor-description">Get a 100% bonus on your first deposit using code <strong>CASINO100</strong>.</p>
-                        <a href="all-bonuses.html" class="btn btn-primary">Learn More</a>
+            <div class="col-md-6">
+                <div class="promo-box">
+                    <img src="pictures/metaspins.png" alt="Floating Image" class="floating-img">
+                    <div class="features-box">
+                        <h4>Rewards</h4>
+                        <ul class="list-unstyled">
+                            <li>» Daily Free Lootbox</li>
+                            <li>» Increased Rakeback</li>
+                            <li>» 100% Deposit Bonus</li>
+                            <li>» Wager Leaderboard</li>
+                        </ul>
                     </div>
+                    <a href="https://metamedialinks.com/e9b9bb0af" class="claim-btn">Claim Bonus</a>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="sponsor-box">
-                    <img src="images/datdrop.png" class="sponsor-img" alt="Sponsor 2">
-                    <div class="sponsor-info">
-                        <h5 class="sponsor-title">DatDrop</h5>
-                        <p class="sponsor-description">Exclusive 50 free spins on registration with code <strong>SPIN50</strong>.</p>
-                        <a href="all-bonuses.html" class="btn btn-primary">Learn More</a>
+            <div class="col-md-6">
+                <div class="promo-box">
+                    <img src="pictures/datdrop.png" alt="Floating Image" class="floating-img">
+                    <div class="features-box">
+                        <h4>Rewards</h4>
+                        <ul class="list-unstyled">
+                            <li>» Join FREE battles</li>
+                            <li>» Double giveaway entries</li>
+                            <li>» Bigger tips during stream</li>
+                            <li>» 5% Deposit bonus</li>
+                        </ul>
                     </div>
+                    <a href="https://datdrop.com/" class="claim-btn">Claim Bonus</a>
                 </div>
             </div>
         </div>
-    </div>
-</section>
 
-<!-- Leaderboard Section -->
-<section id="leaderboard" class="full-screen-section my-5">
-    <h1 class="text-center text-yellow">WAGER LEADERBOARD</h1>
-    <div class="container">
-        <div class="podium">
-            <div class="podium-box second-place podium-item" id="2">
-                <div class="number-circle-podium">2</div>
-                <div class="name">FadeAqua</div>
-                <div class="wagered">Wagered</div>
-                <div class="wagered-amount">
-                    <h4><span class="highlight-light">$ </span>16,000</h4><hr>
-                </div>
-                <div class="price-box">
-                    <h4 class="price"><span class="highlight-light">$</span> 250</h4>
-                </div>
-            </div>
-            <div class="podium-box first-place podium-item" id="1">
-                <div class="number-circle-podium">1</div>
-                <div class="name">Jumper</div>
-                <div class="wagered">Wagered</div>
-                <div class="wagered-amount">
-                    <h4><span class="highlight-light">$ </span>22,000</h4><hr>
-                </div>
-                <div class="price-box">
-                    <h4 class="price"><span class="highlight-light">$</span> 500</h4>
-                </div>
-            </div>
-            <div class="podium-box third-place podium-item" id="3">
-                <div class="number-circle-podium">3</div>
-                <div class="name">SlowSon</div>
-                <div class="wagered">Wagered</div>
-                <div class="wagered-amount">
-                    <h4><span class="highlight-light">$ </span>2,400</h4><hr>
-                </div>
-
-                <div>Reward</div>
-                <div class="price-box">
-                    <h4 class="price"><span class="highlight-light">$</span> 125</h4>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="text-center mt-4">
-        <a href="leaderboards.html" class="btn btn-primary">View Full Leaderboard</a>
-    </div>
-</section>
-
-<!-- Latest Content from YouTube Section -->
-<section id="latest-content" class="full-screen-section py-5">
-    <div class="container">
-        <h1 class="text-center mb-4">Latest Content from YouTube</h1>
         <div class="row">
-            <div class="col-md-4">
-                <div class="video-box">
-                    <a href="https://www.youtube.com/watch?v=video1" target="_blank">
-                        <img src="https://img.youtube.com/vi/video1/maxresdefault.jpg" alt="Video Title 1" class="video-thumbnail">
-                    </a>
-                    <h5 class="video-title">Video Title 1</h5>
+            <div class="col-md-6">
+                <div class="metaspins-box">
+                    <img src="pictures/metaspins.png" alt="MetaSpins" class="redirect-img">
+                    <a href="https://metamedialinks.com/e9b9bb0af" class="redirect-button metaspins-button">VIP Program</a>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="video-box">
-                    <a href="https://www.youtube.com/watch?v=video2" target="_blank">
-                        <img src="https://img.youtube.com/vi/video2/maxresdefault.jpg" alt="Video Title 2" class="video-thumbnail">
-                    </a>
-                    <h5 class="video-title">Video Title 2</h5>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="video-box">
-                    <a href="https://www.youtube.com/watch?v=video3" target="_blank">
-                        <img src="https://img.youtube.com/vi/video3/maxresdefault.jpg" alt="Video Title 3" class="video-thumbnail">
-                    </a>
-                    <h5 class="video-title">Video Title 3</h5>
+            <div class="col-md-6">
+                <div class="leaderboard-box">
+                    <h5 class="white"><span class="red">L</span>eader<span class="red">boards</span></h5>
+                    <a href="/leaderboards" class="redirect-button leaderboard-button">Leaderboards</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<!-- Stay Connected Section -->
+<section id="stay-connected" class="fullscreen-section">
+    <div class="container-fluid">
+        <h1 class="text-center">Stay <span>Connected</span></h1>
+        <div class="row">
+            <!-- YouTube -->
+            <div class="col-md-3">
+                <div class="platform-box">
+                    <div class="logo-container">
+                        <img src="pictures/youtube.png" alt="Platform Logo" class="platform-logo">
+                    </div>
+                    <div class="line"></div>
+                    <h2>Youtube</h2>
+                    <h3>Subscribe to channel</h3>
+                    <a href="https://www.youtube.com/@Thegambiz" class="redirect-button youtube">Subscribe</a>
+                    <p class="platform-link">youtube.com/c/thegambizz</p>
+                </div>
+            </div>
+
+            <!-- Kick -->
+            <div class="col-md-3">
+                <div class="platform-box">
+                    <div class="logo-container">
+                        <img src="pictures/kick.png" alt="Platform Logo" class="platform-logo">
+                    </div>
+                    <div class="line"></div>
+                    <h2>Kick</h2>
+                    <h3>Watch me live</h3>
+                    <a href="https://kick.com/thegambizz" class="redirect-button kick">Follow</a>
+                    <p class="platform-link">kick.com/thegambizz</p>
+                </div>
+            </div>
+
+            <!-- Twitter -->
+            <div class="col-md-3">
+                <div class="platform-box">
+                    <div class="logo-container">
+                        <img src="pictures/x.png" alt="Platform Logo" class="platform-logo">
+                    </div>
+                    <div class="line"></div>
+                    <h2>X / Twitter</h2>
+                    <h3>Follow me</h3>
+                    <a href="https://x.com/TheGambizz" class="redirect-button x">Follow</a>
+                    <p class="platform-link">twitter.com/thegambizz</p>
+                </div>
+            </div>
+
+            <!-- Discord -->
+            <div class="col-md-3">
+                <div class="platform-box">
+                    <div class="logo-container">
+                        <img src="pictures/discord.png" alt="Platform Logo" class="platform-logo">
+                    </div>
+                    <div class="line"></div>
+                    <h2>Discord</h2>
+                    <h3>Stay Updated</h3>
+                    <a href="https://discord.gg/tPykvJXfqF" class="redirect-button discord">Join</a>
+                    <p class="platform-link">discord.gg/tPykvJXfqF</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="js/scripts.js"></script>
 </body>
-<footer class="footer">
-    <div class="container text-center">
-        <h5 class="mb-4">Follow Us On</h5>
-        <div class="d-flex justify-content-center">
-            <a href="https://kick.com/thegambizz" class="text-white mx-3">
-                <i class="fab fa-kickstarter fa-2x"></i> <!-- Kick Icon -->
-            </a>
-            <a href="https://www.twitch.tv/thegambizz" class="text-white mx-3">
-                <i class="fab fa-twitch fa-2x"></i> <!-- Twitch Icon -->
-            </a>
-            <a href="https://discord.gg/tPykvJXfqF" class="text-white mx-3">
-                <i class="fab fa-discord fa-2x"></i> <!-- Discord Icon -->
-            </a>
-            <a href="https://x.com/TheGambizz" class="text-white mx-3">
-                <i class="fab fa-twitter fa-2x"></i> <!-- Twitter Icon -->
-            </a>
-        </div>
-        <p class="mt-4">&copy; 2024 Amazing Rewards. All Rights Reserved.</p>
-    </div>
-</footer>
 </html>
