@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'com.fadeaqua'
-version = '0.0.2'
+version = '0.0.8'
 
 java {
     toolchain {
@@ -19,6 +19,7 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'mysql:mysql-connector-java:8.0.33'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'

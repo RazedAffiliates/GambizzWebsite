@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'BlackStreet';
+    src: url('../fonts/Black Street.ttf');
+}
+
 body {
     background-color: #f8f9fa; /* Light background for contrast */
 }
@@ -23,13 +28,13 @@ html, body {
 /* Brand styling */
 .navbar-brand {
     color: #fff;
-    font-family: "Black Street", serif;
+    font-family: "BlackStreet", serif;
     font-size: 4rem;
 }
 
 .navbar-brand:hover {
     color: #fff;
-    font-family: "Black Street", serif;
+    font-family: "BlackStreet", serif;
     font-size: 4rem;
     text-decoration: none;
 }
@@ -226,7 +231,7 @@ html, body {
 }
 
 .black-street {
-    font-family: "Black Street", serif;
+    font-family: "BlackStreet", serif;
 }
 
 #sponsorships {
@@ -238,7 +243,7 @@ html, body {
 
 #sponsorships h1 {
     color: #00acee;
-    font-family: "Black Street", serif;
+    font-family: "BlackStreet", serif;
     font-size: 6rem; /* Larger font size for prominence */
     margin: 0;
     padding-bottom: 10px;
@@ -246,7 +251,7 @@ html, body {
 
 #sponsorships h1 span {
     color: #fff;
-    font-family: "Black Street", serif;
+    font-family: "BlackStreet", serif;
     font-size: 6rem; /* Larger font size for prominence */
 }
 
@@ -254,6 +259,11 @@ html, body {
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
     text-align: center; /* Center text */
+}
+
+.promo-col {
+    padding-right: 20px;
+    margin: auto;
 }
 
 .promo-box {
@@ -347,7 +357,7 @@ html, body {
     text-transform: uppercase; /* Optional: Uppercase text */
 }
 
-.metaspins-box {
+.razed-box {
     display: flex;
     justify-content: space-between;
     margin-top: 50px; /* Add space at the top */
@@ -361,7 +371,7 @@ html, body {
     overflow: hidden;
 }
 
-.metaspins-box::before {
+.razed-box::before {
     content: '';
     position: absolute;
     top: 0;
@@ -376,7 +386,7 @@ html, body {
 }
 
 /* Overlay to darken the background slightly */
-.metaspins-box::after {
+.razed-box::after {
     content: '';
     position: absolute;
     top: 0;
@@ -388,7 +398,7 @@ html, body {
 }
 
 /* Ensure content is above the blurred background */
-.metaspins-box * {
+.razed-box * {
     position: relative;
     z-index: 3; /* Content above the blurred background */
 }
@@ -445,13 +455,13 @@ html, body {
 
 .white {
     margin-right: 20px;
-    font-family: "Black Street", serif;
+    font-family: "BlackStreet", serif;
     color: #fff;
     font-size: 4rem;
 }
 
 .red {
-    font-family: "Black Street", serif;
+    font-family: "BlackStreet", serif;
     color: #f60e27;
     font-size: 4rem;
 }
@@ -547,7 +557,7 @@ html, body {
 
 #stay-connected h1 {
     font-size: 6rem;
-    font-family: "Black Street", serif;
+    font-family: "BlackStreet", serif;
     color: #00acee;
     margin-bottom: 40px;
 }
@@ -598,7 +608,7 @@ html, body {
 
 .platform-box h2 {
     font-size: 3.5rem;
-    font-family: "Black Street", serif;
+    font-family: "BlackStreet", serif;
     color: #fff;
 }
 

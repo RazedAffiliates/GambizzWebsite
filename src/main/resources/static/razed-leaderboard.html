@@ -7,8 +7,9 @@
     <title>TheGambizz - Leaderboards</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/leaderboards.css?v.1.1.2">
-    <script src="js/leaderboards.js?v=0.0.4" type="module" defer></script>
+    <link rel="stylesheet" href="css/leaderboards.css?v.1.2.3">
+    <script src="js/razed-leaderboards.js?v=1.0.2" type="module" defer></script>
+    <script src="js/timer.js?v=0.0.1" type="module" defer></script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
@@ -26,7 +27,7 @@
                     <a class="nav-link" href="/bonuses">Bonuses</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/leaderboards">Leaderboards</a>
+                    <a class="nav-link" href="/leaderboards-razed">Leaderboards</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/socials">Socials</a>
@@ -40,41 +41,67 @@
     <img src="pictures/header-leaderboard.png" alt="Front Image" class="front-image">
     <div class="content">
         <h1>Leader<span>board</span></h1>
-        <!-- The Modal -->
+
         <!-- Button to Open the Modal -->
         <a class="info-button" data-toggle="modal" data-target="#myModal">Show Information</a>
     </div>
 
-    <div class="podium">
+    <p class="prize-info">All prizes are in razed credits *</p>
+
+    <div id="leaderboard" class="podium">
         <div class="podium-box second-place podium-item" id="2">
-            <img src="pictures/second.png" alt="Second">
+            <img src="pictures/razed-second.png" alt="Second">
             <h2>User</h2>
             <p class="name">N/A</p>
             <h2>Wagered</h2>
             <p class="wagered-amount"><span class="highlight">$</span> 0.00</p>
             <div class="price-box-second">
-                <p><span class="highlight">$</span> 250.00</p>
+                <p><span class="highlight">$</span> 650</p>
             </div>
         </div>
         <div class="podium-box confetti first-place podium-item" id="1">
-            <img src="pictures/first.png" alt="First">
+            <img src="pictures/razed-first.png" alt="First">
             <h2>User</h2>
             <p class="name">N/A</p>
             <h2>Wagered</h2>
             <p class="wagered-amount"><span class="highlight">$</span> 0.00</p>
             <div class="price-box-first">
-                <p><span class="highlight">$</span> 500.00</p>
+                <p><span class="highlight">$</span> 1,300</p>
             </div>
         </div>
         <div class="podium-box third-place podium-item" id="3">
-            <img src="pictures/third.png" alt="Third">
+            <img src="pictures/razed-third.png" alt="Third">
             <h2>User</h2>
             <p class="name">N/A</p>
             <h2>Wagered</h2>
             <p class="wagered-amount"><span class="highlight">$</span> 0.00</p>
             <div class="price-box-third">
-                <p><span class="highlight">$</span> 125.00</p>
+                <p><span class="highlight">$</span> 400</p>
             </div>
+        </div>
+    </div>
+
+    <div class="timer-text">
+        <h3>Leaderboard resets in</h3>
+        <p>The winner will be determined when the time runs out,</p>
+        <p>hurry up!</p>
+    </div>
+    <div class="timer">
+        <div class="octagon">
+            <div id="days">00</div>
+            <span>DAYS</span>
+        </div>
+        <div class="octagon">
+            <div id="hours">00</div>
+            <span>HRS</span>
+        </div>
+        <div class="octagon">
+            <div id="minutes">00</div>
+            <span>MIN</span>
+        </div>
+        <div class="octagon">
+            <div id="seconds">00</div>
+            <span>SEC</span>
         </div>
     </div>
 

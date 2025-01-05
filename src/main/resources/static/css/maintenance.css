@@ -1,0 +1,64 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e74c3c; /* Red background */
+    color: #ffffff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Wrapper */
+.maintenance-wrapper {
+    max-width: 600px;
+    padding: 20px;
+    background-color: #ffffff; /* White box for contrast */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #e74c3c;
+}
+
+/* Icon */
+.icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+/* Header */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #e74c3c; /* Matching red */
+}
+
+/* Paragraphs */
+p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+p.team {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #555555;
+}
+
+/* Links */
+a {
+    color: #e74c3c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}

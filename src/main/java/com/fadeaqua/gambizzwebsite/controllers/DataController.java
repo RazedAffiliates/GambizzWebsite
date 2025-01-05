@@ -1,6 +1,6 @@
 package com.fadeaqua.gambizzwebsite.controllers;
 
-import com.fadeaqua.gambizzwebsite.domain.LeaderboardEntry;
+import com.fadeaqua.gambizzwebsite.domain.RazedLeaderboardEntry;
 import com.fadeaqua.gambizzwebsite.services.DataService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,9 +19,9 @@ public class DataController {
         this.dataService = dataService;
     }
 
-    @GetMapping("/data")
-    public ResponseEntity<List<LeaderboardEntry>> getData() {
-        List<LeaderboardEntry> entries = dataService.fetchData();
+    @GetMapping("/razed")
+    public ResponseEntity<List<RazedLeaderboardEntry>> getRazedData() {
+        List<RazedLeaderboardEntry> entries = dataService.fetchRazedLeaderboard();
         return ResponseEntity.ok(entries);
     }
 }

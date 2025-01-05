@@ -15,9 +15,9 @@ import java.net.URI;
 @Controller
 public class PageController {
 
-    @RequestMapping("/leaderboards")
-    public ResponseEntity<Resource> showLeaderboards(HttpServletRequest request) throws IOException {
-        Resource resource = new ClassPathResource("static/leaderboard.html");
+    @RequestMapping("/leaderboards-razed")
+    public ResponseEntity<Resource> showRazedLeaderboard(HttpServletRequest request) throws IOException {
+        Resource resource = new ClassPathResource("static/razed-leaderboard.html");
         if (resource.exists()) {
             HttpHeaders headers = new HttpHeaders();
             headers.add(HttpHeaders.CONTENT_TYPE, "text/html");
