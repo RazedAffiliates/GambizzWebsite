@@ -21,28 +21,38 @@ public class DataService {
         this.restTemplate = restTemplate;
     }
 
-    public List<RazedLeaderboardEntry> fetchRazedLeaderboard() {
-        // Date formatter for "YYYY-MM-DD HH:MM:SS"
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        LocalDate now = LocalDate.now();
+public List<RazedLeaderboardEntry> fetchRazedLeaderboard() {
+    // Date formatter for "YYYY-MM-DD HH:MM:SS"
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+    LocalDate now = LocalDate.now();
 
-        String fromDate = now.withDayOfMonth(1).atStartOfDay().format(formatter);
-        String toDate = now.withDayOfMonth(now.lengthOfMonth()).atTime(23, 59, 59).format(formatter);
+    String fromDate = now.withDayOfMonth(1).atStartOfDay().format(formatter);
+    String toDate = now.withDayOfMonth(now.lengthOfMonth()).atTime(23, 59, 59).format(formatter);
 
-        // Build URL with constant query parameters
-        String url = String.format(
-                "%s?referral_code=%s&from=%s&to=%s&top=%d",
-                "https://api.razed.com/player/api/v1/referrals/leaderboard", "TGZZ", fromDate, toDate, 10
-        );
+    String url = String.format(
+            "%s?referral_code=%s&from=%s&to=%s&top=%d",
+            "https://api.razed.com/player/api/v1/referrals/leaderboard", "TGZZ", fromDate, toDate, 10
+    );
 
-        // Set headers and make the request
-        var headers = new HttpHeaders();
-        headers.set("X-Referral-Key", "eyJpdiI6Im1CbkVxc3ZFRmxuOURKNG9aTjF1U0E9PSIsInZhbHVlIjoiTXRiaTJ1Sk1kSGg0OEVkemtXSzh4UT09IiwibWFjIjoiOGRiMjY2ZDlmYWFhYmQxMzM3ODYzNmM0NzJjYmY3ZjA3OWUzYmFjMjA3OTI2MWQ1YmI0NmY5ZjZmNTczZGYyMiIsInRhZyI6IiJ9");
-        HttpEntity<String> entity = new HttpEntity<>(headers);
+    var headers = new HttpHeaders();
+    headers.set("X-Referral-Key", "eyJpdiI6Im1CbkVxc3ZFRmxuOURKNG9aTjF1U0E9PSIsInZhbHVlIjoiTXRiaTJ1Sk1kSGg0OEVkemtXSzh4UT09IiwibWFjIjoiOGRiMjY2ZDlmYWFhYmQxMzM3ODYzNmM0NzJjYmY3ZjA3OWUzYmFjMjA3OTI2MWQ1YmI0NmY5ZjZmNTczZGYyMiIsInRhZyI6IiJ9");
+    HttpEntity<String> entity = new HttpEntity<>(headers);
 
-        ResponseEntity<RazedLeaderboardResponse> response = restTemplate.exchange(
-                url, HttpMethod.GET, entity, RazedLeaderboardResponse.class);
+    ResponseEntity<RazedLeaderboardResponse> response = restTemplate.exchange(
+            url, HttpMethod.GET, entity, RazedLeaderboardResponse.class);
 
-        return response.getBody() != null ? response.getBody().getData() : List.of();
+    List<RazedLeaderboardEntry> data = response.getBody() != null ? response.getBody().getData() : List.of();
+
+    data.forEach(entry -> entry.setUsername(anonymizeName(entry.getUsername())));
+
+    return data;
+}
+
+private String anonymizeName(String name) {
+    if (name == null || name.length() <= 3) {
+        return name;
     }
+    return name.substring(0, 3) + "*".repeat(name.length() - 3);
+}
+
 }

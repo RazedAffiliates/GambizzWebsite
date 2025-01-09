@@ -50,23 +50,13 @@ async function updateLeaderboard() {
 }
 
 function anonymizeName(name) {
-    const length = name.length;
-
     // If the name has 3 or fewer characters, return it as is
-    if (length <= 3) {
+    if (name.length <= 3) {
         return name;
     }
 
-    // Calculate the starting index for the 2 middle characters
-    const start = Math.floor((length - 1) / 2) - (length % 2 === 0 ? 1 : 0);
-
-    // Replace the 2 middle characters with '*'
-    const censoredName =
-        name.slice(0, start) + // Characters before the middle
-        '**' + // Replace 2 middle characters
-        name.slice(start + 2); // Characters after the middle
-
-    return censoredName;
+    // Show the first 3 characters, replace the rest with '*'
+    return name.slice(0, 3) + '*'.repeat(name.length - 3);
 }
 
 function getPriceByIndex(index) {
